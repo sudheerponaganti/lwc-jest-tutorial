@@ -1,0 +1,8 @@
+<template>
+    <lightning-card  title="HelloBinding" icon-name="custom:custom14">
+        <div class="slds-var-m-around_medium first">
+       <p>Hello,{greeting}!</p>
+        </div>
+        <lightning-input type="text" label="Name" value={greeting} onchange={changeHandler}></lightning-input>
+     </lightning-card>
+</template>

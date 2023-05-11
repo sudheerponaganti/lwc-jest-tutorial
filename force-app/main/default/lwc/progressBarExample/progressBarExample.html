@@ -1,0 +1,40 @@
+<template>
+    
+    <div onreset={resetHandler} class="slds-var-m-horizontal_xx-large" style="margin-left: 366px;margin-right: 366px;">
+        <div class="slds-var-p-vertical_medium  slds-align_absolute-center slds-text-heading_medium slds-theme_default">
+            <b>Progress Bar</b>
+          </div>
+        <lightning-card >
+            <div class="slds-grid slds-grid_align-spread slds-var-p-horizontal_xx-large slds-var-p-vertical_small">
+                <span>Track Progress</span>
+                <span aria-hidden="true">
+                    <strong>{progress}%Complete</strong>
+                </span>
+            </div>
+           
+            <div class="slds-var-m-horizontal_xx-large">
+            <lightning-progress-bar value={progress} variant="circular"></lightning-progress-bar>
+            
+            <lightning-input type="text" name="firstName" value={formData.firstName} label="First Name" placeholder="type here..." class="first-name" onchange={changeHandler}></lightning-input>
+           
+            
+            <lightning-input type="text" name="lastName"  value={formData.lastName} label="Last Name" placeholder="type here..."  class="last-name" onchange={changeHandler}></lightning-input>
+            
+            
+            <lightning-input type="date" name="date"  value={formData.date} label="Birth Date" placeholder="type here..." class="birth-date" onchange={changeHandler}></lightning-input>
+            
+           
+            <lightning-input type="email" name="email"  value={formData.email} label="Email address" placeholder="type here..."  class="email" onchange={changeHandler}></lightning-input>
+            
+            <lightning-input type="tel"   name="phone"  value={formData.phone} label="Mobile" placeholder="3456728912" class="phone" onchange={changeHandler} pattern="[0-9]{10}"></lightning-input>
+        </div>
+        <div class="slds-align_absolute-center slds-text-heading_medium" >
+            <lightning-button  label="Reset" type="reset" title="Reset" onclick={resetHandler} class="slds-var-m-around_medium reset"></lightning-button>
+            <lightning-button  variant="brand" label="Submit" title="Submit" onclick={submitHandler} class="slds-var-m-around_medium submit"></lightning-button>
+        </div>
+   
+
+        </lightning-card>
+    </div>
+  
+</template>

@@ -1,0 +1,14 @@
+<template>
+    <template if:true={userDetail}>
+<lightning-layout vertical-align="center">
+<lightning-layout-item>
+    <div>
+        {userDetail.Name}
+    </div>
+</lightning-layout-item>
+</lightning-layout>
+    </template>
+    <template if:false={userDetail}>
+        <p>No User Data Available</p>
+    </template>
+</template>

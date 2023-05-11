@@ -1,0 +1,30 @@
+<template>
+    <!-- Parent To Child Primitive Communication -->
+    <lightning-card title=" Child Primitive Type Comp">
+        <div class="slds-m-around_medium nameClass">
+            {name}
+        </div>
+    </lightning-card>
+    <!-- Parent To Child  Non-Primitive Communication -->
+    <lightning-card title="Child Non-Primitive Carousel Component">
+        <div class="slds-m-around_medium">
+            <lightning-carousel>
+                <template for:each={carouselDetails} for:item="item">
+                    <lightning-carousel-image
+                    key={item.header}
+                    src = {item.src}
+                    header = {item.header}
+                    description = {item.description}
+                    alternative-text = {item.alternativeText}>
+                </lightning-carousel-image>
+                </template>   
+            </lightning-carousel>
+        </div>
+    </lightning-card>
+    <!-- Child Communication from Parent Through Action -->
+    <lightning-card title=" Child Communication on Action To Parent Comp">
+        <div class="slds-m-around_medium">
+            <lightning-progress-bar value={progressNumber} size="large"></lightning-progress-bar>
+        </div>
+    </lightning-card>  
+</template>

@@ -1,0 +1,13 @@
+<template>
+    <c-p2c-child-primitive-comp
+    name="Called primitive Dta type from Parent To Child"
+    carousel-details={carouselData}
+    progress-number={progressValue}></c-p2c-child-primitive-comp>
+    <lightning-input type="number" 
+                     value={progressValue} 
+                     onkeyup={progressChangeHandler} 
+                     label="Enter a number" 
+                     class="input-box">
+    </lightning-input>
+     <!-- <button onclick={nameHandler}>getName</button> -->
+</template>
